@@ -10,7 +10,6 @@ def append(digit, word):
 
     if digit == 0:
         key = hashlib.md5(word.encode('ascii')).hexdigest()
-        # print(word,key)
 
 
 
