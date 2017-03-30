@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Kopi-CTP Challenge
+# Kopi-CTF Challenge
 # HowZ: Yujia, Hao, Su, Xiongyi
 
 from flask import Flask, render_template,request,redirect,make_response,session
