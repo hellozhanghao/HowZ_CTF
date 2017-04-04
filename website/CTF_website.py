@@ -3,15 +3,8 @@
 # HowZ: Yujia, Hao, Su, Xiongyi
 
 from flask import Flask, render_template,request,redirect,make_response,session
-import sqlite3
-import os
-import hashlib
 
 app = Flask(__name__)
-
-def hash(data):
-    """ Wrapper around sha224 """
-    return hashlib.sha224(data.replace('\n','').encode('ascii')).hexdigest()
 
 @app.route('/')
 def main():
@@ -19,7 +12,6 @@ def main():
         
 @app.route('/search')
 def search():
-    term = request.args.get('term')
     return render_template('main.html', error='haha, you think I have any function here?!')
 
 if __name__ == '__main__':
