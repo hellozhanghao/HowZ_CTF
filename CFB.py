@@ -1,16 +1,16 @@
 import hashlib
-from saes import *
+# from saes import *
 
 plaintext = 'hello world!!!!!1234567890123456'
 data = bytearray()
 data.extend(map(ord,plaintext))
 
 
-keyplain = 'test'
+keyplain = 'a'
 hash1 = hashlib.md5(keyplain.encode('utf-8'))
 keyarray = bytearray(hash1.digest())
 
-ivplain = 'hello'
+ivplain = 'FUN'
 hash2 = hashlib.md5(ivplain.encode('utf-8'))
 iv = bytearray(hash2.digest())
 
@@ -71,15 +71,15 @@ def xor(roundarray, data):
 result = cfb(bytearray(f), keyarray, iv)
 test = open('ciphered.pdf','wb')
 test.write(result)
-
-f2 = open('ciphered.pdf','rb')
-f2 = f2.read()
-result2 = cfb_inv(bytearray(f2), keyarray, iv)
-test2 = open('plain.pdf','wb')
-test2.write(result2)
-
-
-
+#
+# f2 = open('ciphered.pdf','rb')
+# f2 = f2.read()
+# result2 = cfb_inv(bytearray(f2), keyarray, iv)
+# test2 = open('plain.pdf','wb')
+# test2.write(result2)
+#
+#
+#
 
 
 
