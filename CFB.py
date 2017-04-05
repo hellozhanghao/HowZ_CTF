@@ -1,23 +1,12 @@
 import hashlib
-# from saes import *
-
-plaintext = 'hello world!!!!!1234567890123456'
-data = bytearray()
-data.extend(map(ord,plaintext))
 
 
-keyplain = 'china'
-hash1 = hashlib.md5(keyplain.encode('utf-8'))
-keyarray = bytearray(hash1.digest())
 
-ivplain = 'FUN'
-hash2 = hashlib.md5(ivplain.encode('utf-8'))
-iv = bytearray(hash2.digest())
 
 in_file = open('topsecret.pdf','rb')
 f = in_file.read()
 
-def cfb(input_file, keyarray, iv):
+def cfb(input_file, keyarray, iv = hashlib.md5("haoz".encode("utf-8")).digest()):
     vector = iv
     ciphertext = bytearray()
     blocknum = int(len(input_file)/16)
@@ -32,7 +21,7 @@ def cfb(input_file, keyarray, iv):
             ciphertext.append(k)
     return ciphertext
 
-def cfb_inv(ciphertext, keyarray, iv):
+def cfb_inv(ciphertext, keyarray, iv= hashlib.md5("haoz".encode("utf-8")).digest()):
     vector = iv
     plaintext = bytearray()
     blocknum = int(len(ciphertext)/16)
@@ -68,17 +57,17 @@ def xor(roundarray, data):
         statearray.append(roundarray[i]^data[i])
     return statearray
 
-# result = cfb(bytearray(f), keyarray, iv)
-# test = open('ciphered.pdf','wb')
-# test.write(result)
-#
+result = cfb(bytearray(f), bytearray(hashlib.md5("ITA".encode("utf-8")).digest()))
+test = open('ciphered.pdf','wb')
+test.write(result)
+
 # f2 = open('ciphered.pdf','rb')
 # f2 = f2.read()
-# result2 = cfb_inv(bytearray(f2), keyarray, iv)
+# result2 = cfb_inv(bytearray(f2), keyarray)
 # test2 = open('plain.pdf','wb')
 # test2.write(result2)
 #
-#
+
 #
 
 
