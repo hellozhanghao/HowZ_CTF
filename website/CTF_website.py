@@ -2,7 +2,7 @@
 # Kopi-CTF Challenge
 # HowZ: Yujia, Hao, Su, Xiongyi
 
-from flask import Flask, render_template,request,redirect,make_response,session
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def main():
         
 @app.route('/search')
 def search():
-    return render_template('main.html', error='haha, you think I have any function here?!')
+    return render_template('main.html', error='Haha, nice try! You think there is any function here?!')
 
 if __name__ == '__main__':
     app.config.update(SESSION_COOKIE_HTTPONLY=False)
