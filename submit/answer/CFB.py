@@ -3,8 +3,7 @@ import hashlib
 
 
 
-in_file = open('topsecret.pdf','rb')
-f = in_file.read()
+
 
 def cfb(input_file, keyarray, iv = hashlib.md5("haoz".encode("utf-8")).digest()):
     vector = iv
@@ -57,9 +56,7 @@ def xor(roundarray, data):
         statearray.append(roundarray[i]^data[i])
     return statearray
 
-result = cfb(bytearray(f), bytearray(hashlib.md5("ITA".encode("utf-8")).digest()))
-test = open('ciphered.pdf','wb')
-test.write(result)
+
 
 # f2 = open('ciphered.pdf','rb')
 # f2 = f2.read()

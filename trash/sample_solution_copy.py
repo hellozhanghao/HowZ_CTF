@@ -3,7 +3,7 @@ import time
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-f = open("topsecret.pdf", 'rb')
+f = open("plain.pdf", 'rb')
 input = f.read()
 
 ba = bytearray(input)
