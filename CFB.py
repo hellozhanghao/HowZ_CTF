@@ -6,7 +6,7 @@ data = bytearray()
 data.extend(map(ord,plaintext))
 
 
-keyplain = 'a'
+keyplain = 'china'
 hash1 = hashlib.md5(keyplain.encode('utf-8'))
 keyarray = bytearray(hash1.digest())
 
@@ -68,9 +68,9 @@ def xor(roundarray, data):
         statearray.append(roundarray[i]^data[i])
     return statearray
 
-result = cfb(bytearray(f), keyarray, iv)
-test = open('ciphered.pdf','wb')
-test.write(result)
+# result = cfb(bytearray(f), keyarray, iv)
+# test = open('ciphered.pdf','wb')
+# test.write(result)
 #
 # f2 = open('ciphered.pdf','rb')
 # f2 = f2.read()

@@ -33,6 +33,6 @@ def append(digit, word):
 
 start_time = time.time()
 
-append(1, '')
+append(5, '')
 #
 # print("Time taken: ", time.time() - start_time, "s")
