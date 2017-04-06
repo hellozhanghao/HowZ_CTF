@@ -1,0 +1,27 @@
+plaintext:
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+ciphertext:
+oIb)q8fI;"l)%]r5Qfa#inMis2;)q$fYjytZvQG%c]-OuW6nW&amp
+
+qq
+oI
+
+aa
+}s
+
+ab
+}t
+
+a       10
+}       92
+
+b
+~
+
+1
+Z
+
+0000      0  0  0  0
+Y(Lm     60 69 47 22
+
+theKopiCTFflag=kopiCTF{Z2#2s81qD"asd'1
