@@ -50,12 +50,3 @@ def xor(roundarray, data):
     for i in range(len(roundarray)):
         statearray.append(roundarray[i] ^ data[i])
     return statearray
-
-# f2 = open('ciphered.pdf','rb')
-# f2 = f2.read()
-# result2 = cfb_inv(bytearray(f2), keyarray)
-# test2 = open('plain.pdf','wb')
-# test2.write(result2)
-#
-
-#

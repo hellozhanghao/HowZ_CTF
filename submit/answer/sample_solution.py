@@ -4,14 +4,13 @@ from submit.answer.CFB import *
 
 alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-f = open("/Users/zhanghao/Desktop/Documents/Term7/Maps/HowZ_CTF/submit/chanllenge/secret.pdf", 'rb')
+f = open("/Users/zhanghao/Desktop/Documents/Term7/Maps/HowZ_CTF/submit/HaoZ_Challenge/secret.pdf", 'rb')
 
 input = f.read()
 
 ba = bytearray(input)
 
 f.close()
-
 
 def append(digit, word):
     print(word)
