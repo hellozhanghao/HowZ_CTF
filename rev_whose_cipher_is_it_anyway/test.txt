@@ -24,4 +24,4 @@ Z
 0000      0  0  0  0
 Y(Lm     60 69 47 22
 
-theKopiCTFflag=k
+theKopiCTFflag=kopiCTF{Z2#2s81qD"asd'1
