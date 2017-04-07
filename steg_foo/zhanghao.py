@@ -30,20 +30,38 @@ def a_print(arr, fill):
         print(line)
 
 
-print(len(string.printable))
+# a_print(red,fill=3)
+#
+#
+# ba = bytearray()
+# ba.append(0)
+# count = 0
+# for i in range(height):
+#     for j in range(width):
+#         count += 1
+#         if red[i][j]%2 ==0:
+#             ba[-1] += 2^count
+#         if count == 8:
+#             ba.append(0)
+#
 
-cipher = []
-for i in range(len(red)):
-    cipher.append([])
-    for j in range(len(red[0])):
-        if red[i][j]  in range(32,127)  :
-            # print(i)
-            cipher[i].append(chr(red[i][j] ))
-        else:
-            cipher[i].append(" ")
 
-a_print(cipher, fill=1)
 
+
+
+
+# cipher = []
+# for i in range(len(red)):
+#     cipher.append([])
+#     for j in range(len(red[0])):
+#         if red[i][j]  in range(32,127)  :
+#             # print(i)
+#             cipher[i].append(chr(red[i][j] ))
+#         else:
+#             cipher[i].append(" ")
+#
+# a_print(cipher, fill=1)
+#
 
 #
 # 107, 111, 112, 105
