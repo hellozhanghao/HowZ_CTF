@@ -20,7 +20,7 @@ def contact(cipherText):
     serverResult = conn.recv(7)
     conn.close()
 
-    return serverResult.decode('utf-8')=='ree'
+    return serverResult.decode('utf-8') == 'ree'
 
 
 for i in range(255):
@@ -34,30 +34,23 @@ for i in range(255):
     try_cipher.append(e[1])
     try_cipher.append(e[2])
 
-
-    try_cipher[1][5]  = 203
-    try_cipher[1][6]  = 93
-    try_cipher[1][7]  = 71
-    try_cipher[1][8]  = 90
-    try_cipher[1][9]  = 15
-    try_cipher[1][10] = 131
-    try_cipher[1][11] = 65
-    try_cipher[1][12] = 229
-    try_cipher[1][13] = 181
-    try_cipher[1][14] = 147
-    try_cipher[1][15] = 18
-
-    for j in range(5,16):
-        try_cipher[1][j] ^= 11
+    # try_cipher[1][5]  = 203
+    # try_cipher[1][13] ^= 108 ^ 3
+    try_cipher[1][10] ^= 45 ^ 6
+    try_cipher[1][11] ^= 45^ 6
+    try_cipher[1][12] ^= 102 ^ 6
+    try_cipher[1][13] ^= 108 ^ 6
+    try_cipher[1][14] ^= 97 ^ 6
+    try_cipher[1][15] ^= 103 ^ 6
 
 
 
+    if contact(bytes(try_cipher[0]) + bytes(try_cipher[1]) + bytes(try_cipher[2])):
+        print(i)
 
-
-    try_Bytes = bytes(try_cipher[0]) + bytes(try_cipher[1]) + bytes(try_cipher[2])
-    if contact(try_Bytes): print(i)
+print(try_cipher)
 
 
 
 
-
+    # if contact(try_Bytes): print(i)
