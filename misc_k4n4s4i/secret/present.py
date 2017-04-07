@@ -97,34 +97,14 @@ def present_inv(plain, key):
 
 if __name__=="__main__":
 
-    plain1 = 0x0000000000000000
-    key1 = 0x00000000000000000000
+    plain1 = 0x0
+    key1 = 0x0
     cipher1 = present(plain1,key1)
     plain11 = present_inv(cipher1,key1)
-    # # print(format(cipher1,'x'))
-    # # print(format(plain11,'x'))
-    assert plain1 == plain11
+    print(format(cipher1,'x'))
 
-    plain2 = 0x0000000000000000
-    key2 = 0xFFFFFFFFFFFFFFFFFFFF
-    cipher2 = present(plain2,key2)
-    plain22 = present_inv(cipher2,key2)
-    # # print(format(cipher2,'x'))
-    # # print(format(plain22,'x'))
-    assert plain2 == plain22
-
-    plain3 = 0xFFFFFFFFFFFFFFFF
-    key3 = 0x00000000000000000000
-    cipher3 = present(plain3,key3)
-    plain33 = present_inv(cipher3,key3)
-    # # print(format(cipher3,'x'))
-    # # print(format(plain33,'x'))
-    assert plain3 == plain33
-
-    plain4 = 0xFFFFFFFFFFFFFFFF
-    key4 = 0xFFFFFFFFFFFFFFFFFFFF
-    cipher4 = present(plain4,key4)
-    plain44 = present_inv(cipher4,key4)
-    # # print(format(cipher4,'x'))
-    # # print(format(plain44,'x'))
-    assert plain4 == plain44
+    plain1 = 0x2
+    key1 = 0x2
+    cipher1 = present(plain1, key1)
+    plain11 = present_inv(cipher1, key1)
+    print(format(cipher1, 'x'))

@@ -3,7 +3,7 @@
 # Done by Alice
 
 from solver import LinearPresent
-from present import *
+from misc_k4n4s4i/secret/present import *
 import argparse
 
 i2b = lambda i: i.to_bytes(8, byteorder='little')

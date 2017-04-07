@@ -36,9 +36,9 @@ cipher = []
 for i in range(len(red)):
     cipher.append([])
     for j in range(len(red[0])):
-        if red[i][j] in range(32,127) :
+        if red[i][j]  in range(32,127)  :
             # print(i)
-            cipher[i].append(chr(red[i][j]))
+            cipher[i].append(chr(red[i][j] ))
         else:
             cipher[i].append(" ")
 
@@ -51,10 +51,10 @@ a_print(cipher, fill=1)
 # print(space)
 # for i in range(len(red)):
 #     for j in range(len(red[0])):
-#         if red[i][j] in space:
-#             print(i,j, chr(red[i][j]), red[i][j])
-
-# cipher =
+#         if red[j][i] in space:
+#             print(i,j, chr(red[j][i]), red[j][i])
+#
+# # cipher =
 
 
 
