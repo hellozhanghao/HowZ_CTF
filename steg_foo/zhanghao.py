@@ -44,6 +44,7 @@ for i in range(len(red)):
 
 a_print(cipher, fill=1)
 
+
 #
 # 107, 111, 112, 105
 # space = [ord('k'),ord('o'),ord('p'),ord('i')]
